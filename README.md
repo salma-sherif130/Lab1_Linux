@@ -4,12 +4,7 @@
 # a. Remove dir11 in one-step. What did you notice? And how did you overcome that?
 # b. Then remove dir12 using rmdir –p command. State what happened to the hierarchy 
 
-ubuntu@festive-screamer:~$ mkdir dir1
-ubuntu@festive-screamer:~$ mikdir dir1/dir11
-Command 'mikdir' not found, did you mean:
-  command 'mkdir' from deb coreutils (9.4-2ubuntu2)
-  command 'mmkdir' from deb mblaze (1.1-1)
-Try: sudo apt install <deb name>
+
 ubuntu@festive-screamer:~$ mkdir dir1/dir11
 ubuntu@festive-screamer:~$ mkdir dir1/dir12
 ubuntu@festive-screamer:~$ mkdir docs
@@ -24,9 +19,6 @@ ubuntu@festive-screamer:~$ cd dir1
 ubuntu@festive-screamer:~/dir1$ rm dir11
 rm: cannot remove 'dir11': Is a directory
 ubuntu@festive-screamer:~/dir1$ rm -r dir11
-ubuntu@festive-screamer:~/dir1$ rm -p dir12
-rm: invalid option -- 'p'
-Try 'rm --help' for more information.
 ubuntu@festive-screamer:~/dir1$ rmdir -p dir12
 
 # c. The output of the command pwd was /home/user. Write the absolute and relative path for the file mycv
@@ -50,6 +42,8 @@ ubuntu@festive-screamer:/$ sudo mv mypasswd oldpasswd
 ubuntu@festive-screamer:/$ cd bin
 ubuntu@festive-screamer:/bin$ cd ..
 ubuntu@festive-screamer:/$ cd home
+
+
 ubuntu@festive-screamer:/home$ cd ..
 ubuntu@festive-screamer:/$ cd bin
 ubuntu@festive-screamer:/bin$ ls |grep ^[w]
@@ -73,6 +67,7 @@ write
 #9. Display the first 4 lines of /etc/passwd
 
 ubuntu@festive-screamer:/$ head -4 etc/passwd
+
 root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
 bin:x:2:2:bin:/bin:/usr/sbin/nologin
@@ -81,6 +76,7 @@ sys:x:3:3:sys:/dev:/usr/sbin/nologin
 #10.Display the last 7 lines of /etc/passwd
 
 ubuntu@festive-screamer:/$ tail -7 etc/passwd
+
 sshd:x:105:65534::/run/sshd:/usr/sbin/nologin
 pollinate:x:106:1::/var/cache/pollinate:/bin/false
 tcpdump:x:107:108::/nonexistent:/usr/sbin/nologin
@@ -101,6 +97,7 @@ ubuntu@festive-screamer:/$ man 5 etc/passwd
 
 # 13.Display a list of all the commands that contain the keyword passwd in their man page.
 ubuntu@festive-screamer:/$ man -k etc/passwd
+
 pam_localuser (8)    - require users to be listed in /etc/passwd
 update-passwd (8)    - safely update /etc/passwd, /etc/shadow and /etc/group
 
@@ -132,13 +129,14 @@ ubuntu@festive-screamer:/$ sudo vi mycv
 #16. st the available shells in your system.
 
 ubuntu@festive-screamer:/$ cat /etc/shells
-# /etc/shells: valid login shells
-/bin/sh
-/usr/bin/sh
-/bin/bash
-/usr/bin/bash
-/bin/rbash
-/usr/bin/rbash
-/usr/bin/dash
-/usr/bin/screen
-/usr/bin/tmux
+
+    # /etc/shells: valid login shells
+    /bin/sh
+    /usr/bin/sh
+    /bin/bash
+    /usr/bin/bash
+    /bin/rbash
+    /usr/bin/rbash
+    /usr/bin/dash
+    /usr/bin/screen  
+    /usr/bin/tmux
